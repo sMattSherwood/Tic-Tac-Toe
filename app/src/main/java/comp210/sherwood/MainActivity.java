@@ -14,6 +14,9 @@ public class MainActivity extends AppCompatActivity {
     * Should we place an X or O
     *
     * Clear implmentation
+    *
+    * nice to have: player order count (player x's turn
+    * game over logic
     * */
     boolean playerX = true;
     int col = 3;
@@ -43,6 +46,22 @@ public class MainActivity extends AppCompatActivity {
                 iv.setImageResource((R.drawable.blank)); // auto blank
             }
         }
+    }
+
+    /* when the user is finished with a game they can click the button to reset the cells
+    * turnBlank is similar to set tags, but we don't need the tag decloration since we have
+    * already completed that in the above function
+    * */
+    public void turnBlank(View view){
+        for(int x = 0; x < row; x++ ) {
+            TableRow tr = (TableRow) board.getChildAt(x); // will target the cell on the row
+            for (int y = 0; y < col; y++) {
+                ImageView iv = (ImageView) tr.getChildAt(y); // will target the cell on the column
+                ttt[x][y].setReasourceId(R.drawable.blank); // sets cell blank
+                iv.setImageResource(R.drawable.blank);
+            }
+        }
+
 
     }
 
@@ -70,8 +89,9 @@ public class MainActivity extends AppCompatActivity {
                 current.setReasourceId(R.drawable.o); // cells id will match O
             }
 
+            // check if won function
+
             playerX = !playerX; // turns playerX value false
         }
-
     }
 }

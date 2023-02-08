@@ -54,6 +54,7 @@
                 android:layout_weight="1"
                 android:adjustViewBounds="true"
                 android:contentDescription="@string/desc"
+                android:onClick="changeImage"
                 app:srcCompat="@drawable/blank" />
         </TableRow>
 
@@ -69,6 +70,7 @@
                 android:layout_weight="1"
                 android:adjustViewBounds="true"
                 android:contentDescription="@string/desc"
+                android:onClick="changeImage"
                 app:srcCompat="@drawable/o" />
 
             <ImageView
@@ -79,6 +81,7 @@
                 android:layout_weight="1"
                 android:adjustViewBounds="true"
                 android:contentDescription="@string/desc"
+                android:onClick="changeImage"
                 app:srcCompat="@drawable/x" />
 
             <ImageView
@@ -89,6 +92,7 @@
                 android:layout_weight="1"
                 android:adjustViewBounds="true"
                 android:contentDescription="@string/desc"
+                android:onClick="changeImage"
                 app:srcCompat="@drawable/blank" />
         </TableRow>
 
@@ -104,6 +108,7 @@
                 android:layout_weight="1"
                 android:adjustViewBounds="true"
                 android:contentDescription="@string/desc"
+                android:onClick="changeImage"
                 app:srcCompat="@drawable/o" />
 
             <ImageView
@@ -114,6 +119,7 @@
                 android:layout_weight="1"
                 android:adjustViewBounds="true"
                 android:contentDescription="@string/desc"
+                android:onClick="changeImage"
                 app:srcCompat="@drawable/x" />
 
             <ImageView
@@ -124,6 +130,7 @@
                 android:layout_weight="1"
                 android:adjustViewBounds="true"
                 android:contentDescription="@string/desc"
+                android:onClick="changeImage"
                 app:srcCompat="@drawable/blank" />
         </TableRow>
 
@@ -133,6 +140,7 @@
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:onClick="turnBlank"
         android:text="@string/clear"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
